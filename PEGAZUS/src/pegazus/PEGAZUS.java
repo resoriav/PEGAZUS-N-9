@@ -23,12 +23,12 @@ public class PEGAZUS {
         int option;
 
              do {
-            System.out.println(" ========= PEGAZUS =======");
-            System.out.println("1. -> Perimeter of  Plot ");
-            System.out.println("2. -> Area of Surface");
-            System.out.println("3. -> Magnitude of an Earthquake");
-            System.out.println("4. -> Tidal Range");
-            System.out.println("5. -> Exit");
+             System.out.println(" ========= PEGAZUS =======");
+            System.out.println("1. -> ** Perimeter of  Plo t** ");
+            System.out.println("2. -> **Area of Surface ++ ");
+            System.out.println("3. -> ** Magnitude of an Earthquake ** ");
+            System.out.println("4. -> ++ Tidal Range ++");
+            System.out.println("5. -> :( Exit :( ");
 
             System.out.println("Enter your menu option --> ");
             option = input.nextInt();
