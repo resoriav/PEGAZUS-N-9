@@ -59,7 +59,7 @@ public class PEGAZUS {
                     double bandwidth;
                     double area;
                     System.out.println(" Enter Equivalentdistances -> ");
-                    equivalentdistances = input.nextFloat();
+                    equivalentdistances = input.nextint();
                     System.out.println(" Enter Bandwidth -> ");
                     bandwidth = input.nextFloat();
                     area = equivalentdistances*bandwidth ;
