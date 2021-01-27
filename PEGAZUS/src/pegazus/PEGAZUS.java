@@ -76,7 +76,7 @@ public class PEGAZUS {
                     amplitude = input.nextFloat();
                     System.out.println(" Time of varation -> ");
                     timevariation = input.nextFloat();
-                    magnitude = (float)(Math.log10(amplitude)+ 3 * Math.log10(8 * timevariation)-2.85);
+                    magnitude = (float)(Math.log10(amplitude) + 3 * Math.log10(8 * timevariation)-2.85);
                     
                     System.out.println(" Magnitude of an Earthquake " + magnitude);
                     break;
