@@ -18,6 +18,7 @@ public class PEGAZUS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
         Scanner input = new Scanner(System.in);
         boolean mainLoop = true;
         int option;
@@ -53,6 +54,7 @@ public class PEGAZUS {
                     break;
                 
                 case 2:
+
                     double equivalentdistances;
                     double bandwidth;
                     double area;
@@ -66,6 +68,7 @@ public class PEGAZUS {
                     break;
                
                 case 3:
+
                     float amplitude;
                     float timevariation;
                     float magnitude;
@@ -79,6 +82,7 @@ public class PEGAZUS {
                     break;
                
                 case 4:
+
                     float tallheight;
                     float lowheight;
                     float amplitude1;
