@@ -24,7 +24,7 @@ public class PEGAZUS {
         int option;
 
              do {
-             System.out.println(" ========= PEGAZUS =======");
+            System.out.println(" ========= PEGAZUS =========");
             System.out.println("1. -> ** Perimeter of  Plot** ");
             System.out.println("2. -> **Area of Surface ++ ");
             System.out.println("3. -> ** Magnitude of an Earthquake ** ");
