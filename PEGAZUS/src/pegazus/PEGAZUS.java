@@ -92,7 +92,7 @@ public class PEGAZUS {
                     break;
                
                 case 5:
-                    System.out.println(" THANKKS FOR USING OUR PROGRAM ");
+                    System.out.println(" THANKKS FOR USING OUR PROGRAM ");g
                     System.exit(0);
                     break;
                 default:
