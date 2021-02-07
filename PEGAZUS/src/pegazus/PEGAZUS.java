@@ -38,19 +38,8 @@ public class PEGAZUS {
                     break;
                 
                 case 2:
-
-                    double equivalentdistances;
-                    double bandwidth;
-                    double area;
-                    System.out.println(" Enter Equivalentdistances -> ");
-                    equivalentdistances = input.nextFloat();
-                    System.out.println(" Enter Bandwidth -> ");
-                    bandwidth = input.nextFloat();
-                    area = equivalentdistances*bandwidth ;
-                    
-                    System.out.println(" Area of Surface -->" + area);
+                    Areaofsurface(input);
                     break;
-               
                 case 3:
 
                     float amplitude;
@@ -90,6 +79,22 @@ public class PEGAZUS {
             }
 
         } while (option != 5);
+    }
+
+    private static void Perimeterofplot(Scanner input) {
+        double number1;
+        double number2;
+        double number3;
+        double perimeter;
+        System.out.println(" Enter Side1 -> ");
+        number1 = input.nextFloat();
+        System.out.println(" Enter Side2 -> ");
+        number2 = input.nextFloat();
+        System.out.println(" Enter Side3 -> ");
+        number3 = input.nextFloat();
+        perimeter = number1 + number2 + number3;
+        
+        System.out.println(" Perimeter of  Plot is --> " + perimeter);
     }
 
     private static void Perimeterofplot(Scanner input) {
