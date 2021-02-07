@@ -4,12 +4,10 @@
  * and open the template in the editor.
  */
 package pegazus;
-
 import java.util.Scanner;
-
 /**
  *
- * @author Shirley
+ * @author FAMILIA TONATO
  */
 public class PEGAZUS {
 
@@ -18,7 +16,6 @@ public class PEGAZUS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
         Scanner input = new Scanner(System.in);
         boolean mainLoop = true;
         int option;
@@ -37,20 +34,7 @@ public class PEGAZUS {
             switch (option) {
 
                 case 1:
-                   
-                    double number1;
-                    double number2;
-                    double number3;
-                    double perimeter;
-                    System.out.println(" Enter Side1 -> ");
-                    number1 = input.nextFloat();
-                    System.out.println(" Enter Side2 -> ");
-                    number2 = input.nextFloat();
-                    System.out.println(" Enter Side3 -> ");
-                    number3 = input.nextFloat();
-                    perimeter = number1 + number2 + number3;
-                    
-                    System.out.println(" Perimeter of  Plot is --> " + perimeter);
+                    Perimeterofplot(input);
                     break;
                 
                 case 2:
@@ -59,7 +43,7 @@ public class PEGAZUS {
                     double bandwidth;
                     double area;
                     System.out.println(" Enter Equivalentdistances -> ");
-                    equivalentdistances = input.nextfloat();
+                    equivalentdistances = input.nextFloat();
                     System.out.println(" Enter Bandwidth -> ");
                     bandwidth = input.nextFloat();
                     area = equivalentdistances*bandwidth ;
@@ -97,7 +81,7 @@ public class PEGAZUS {
                
                 case 5:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");                 
-   System.exit(0);+   
+                    System.exit(0); 
                     break;
                 default:
                     System.out.println("Invalid option\n\n\n");
@@ -106,6 +90,22 @@ public class PEGAZUS {
             }
 
         } while (option != 5);
+    }
+
+    private static void Perimeterofplot(Scanner input) {
+        double number1;
+        double number2;
+        double number3;
+        double perimeter;
+        System.out.println(" Enter Side1 -> ");
+        number1 = input.nextFloat();
+        System.out.println(" Enter Side2 -> ");
+        number2 = input.nextFloat();
+        System.out.println(" Enter Side3 -> ");
+        number3 = input.nextFloat();
+        perimeter = number1 + number2 + number3;
+        
+        System.out.println(" Perimeter of  Plot is --> " + perimeter);
     }
     
 }
