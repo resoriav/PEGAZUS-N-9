@@ -23,7 +23,7 @@ public class PEGAZUS {
              do {
             System.out.println(" ========= PEGAZUS =========");
             System.out.println("1. -> ** Perimeter of  Plot** ");
-            System.out.println("2. -> **Area of Surface ++ ");
+            System.out.println("2. -> ++ Area of Surface ++ ");
             System.out.println("3. -> ** Magnitude of an Earthquake ** ");
             System.out.println("4. -> ++ Tidal Range ++");
             System.out.println("5. -> :( Exit :( ");
@@ -40,19 +40,7 @@ public class PEGAZUS {
                 case 2:
                     Areaofsurface(input);
                     break;
-                case 3:
-
-                    float amplitude;
-                    float timevariation;
-                    float magnitude;
-                    System.out.println(" Amplitude -> ");
-                    amplitude = input.nextFloat();
-                    System.out.println(" Time of varation -> ");
-                    timevariation = input.nextFloat();
-                    magnitude = (float)(Math.log10(amplitude) + 3 * Math.log10(8 * timevariation)-2.85);
-                    
-                    System.out.println(" Magnitude of an Earthquake " + magnitude);
-                    break;
+                
                
                 case 4:
 
