@@ -41,7 +41,20 @@ public class PEGAZUS {
                     Areaofsurface(input);
                     break;
                 
-               
+               case 3:
+
+                    float amplitude;
+                    float timevariation;
+                    float magnitude;
+                    System.out.println(" Amplitude -> ");
+                    amplitude = input.nextFloat();
+                    System.out.println(" Time of varation -> ");
+                    timevariation = input.nextFloat();
+                    magnitude = (float)(Math.log10(amplitude) + 3 * Math.log10(8 * timevariation)-2.85);
+                    
+                    System.out.println(" Magnitude of an Earthquake " + magnitude);
+                    break;
+                    
                 case 4:
 
                     float tallheight;
