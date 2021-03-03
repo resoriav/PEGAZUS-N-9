@@ -22,18 +22,37 @@ public class ImprovedProyect {
      
         boolean mainLoop = true;
         int option;
-
+             
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println(" ================== PEGAZUS ======================");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+             System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            
              do {
-             System.out.println(" ========= PEGAZUS =======");
-            System.out.println("1. -> * Perimeter of  Plot* ");
-            System.out.println("2. -> **Area of Surface ++ ");
-            System.out.println("3. -> * Magnitude of an Earthquake * ");
-            System.out.println("4. -> ++ Tidal Range ++");
-            System.out.println("5. -> temperature calculator ");
-            System.out.println("6. -> calculate polar coordinates ");
-               
+               System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            System.out.println("1. -> ⁜⁜ Perimeter of  Plot⁜⁜ ");
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            System.out.println("2. -> ⁜⁜Area of Surface ⁜⁜ ");
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            System.out.println("3. -> ⁜⁜ Magnitude of an Earthquake⁜⁜ ");
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            System.out.println("4. -> ⁜⁜ Tidal Range⁜⁜");
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            System.out.println("5. -> ⁜⁜temperature calculator⁜⁜ ");
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
+            System.out.println("6. -> ⁜⁜ calculate polar coordinates⁜⁜ ");
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
             System.out.println("7. -> :( Exit :( ");
-
+            System.out.println("‣‣⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜⁜‣‣");
             System.out.println("Enter your menu option --> ");
             option = input.nextInt();
 
@@ -86,8 +105,7 @@ public class ImprovedProyect {
     
     
     
-    
-    public static void CalculatorTheCoordinatePolar(Scanner input) {
+   public static void CalculatorTheCoordinatePolar(Scanner input) {
         double polarCoordinateX;
         double polarCoordinateY;
         double pi = 3.14F;
