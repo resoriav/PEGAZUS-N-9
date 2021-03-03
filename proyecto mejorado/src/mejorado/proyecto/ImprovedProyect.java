@@ -59,10 +59,9 @@ public class ImprovedProyect {
             switch (option) {
 
                 case 1:
-                   
-                    perimeterOFplot(input);
+                   perimeterOFplot(input);
                     break;
-                
+                                   
                 case 2:
                     areaOfSurface(input);
                     break;
@@ -191,7 +190,7 @@ public class ImprovedProyect {
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println(" Area of Surface -->" + area);
     }
-public static void perimeterOFplot(Scanner input) {
+        public static void perimeterOFplot(Scanner input) {
         double number1;
         double number2;
         double number3;
