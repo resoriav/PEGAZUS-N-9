@@ -191,22 +191,22 @@ public class ImprovedProyect {
         System.out.println(" Area of Surface -->" + area);
     }
         public static void perimeterOFplot(Scanner input) {
-        double number1;
-        double number2;
-        double number3;
-        double perimeter;
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println(" Enter Side1 -> ");
-        number1 = input.nextFloat();
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println(" Enter Side2 -> ");
-        number2 = input.nextFloat();
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println(" Enter Side3 -> ");
-        number3 = input.nextFloat();
-        perimeter = number1 + number2 + number3;
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println(" Perimeter of  Plot is --> " + perimeter);
+         double number1;
+         double number2;
+         double number3;
+         double perimeter;
+         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+          System.out.println(" Enter Side1 -> ");
+            number1 = input.nextFloat();
+         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+          System.out.println(" Enter Side2 -> ");
+            number2 = input.nextFloat();
+         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+          System.out.println(" Enter Side3 -> ");
+            number3 = input.nextFloat();
+             perimeter = number1 + number2 + number3;
+         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+         System.out.println(" Perimeter of  Plot is --> " + perimeter);
     }
     
     }
