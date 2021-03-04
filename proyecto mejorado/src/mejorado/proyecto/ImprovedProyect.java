@@ -102,7 +102,7 @@ public class ImprovedProyect {
                                    
                 break ;
                     
-                 case 7:
+                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
                     System.exit(0);
                     break;
