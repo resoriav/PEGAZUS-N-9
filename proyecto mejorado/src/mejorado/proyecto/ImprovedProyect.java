@@ -299,22 +299,7 @@ public class ImprovedProyect {
         System.out.println("x = " + resultado);
         System.out.println("************************************************");
 }
-         public static  double formulaDeformation (double Force1, double initialLongitud1, 
-            double areaTransversal1, double moduloElasticidad1){
-        double deformation;
-        deformation = (Force1 * initialLongitud1) / (areaTransversal1 * moduloElasticidad1);
-        return deformation;
-        
-    }  
-       public static double calculatePoes (double reservoirArea , double reservoirThickness 
-                , double initialWaterSaturation , double volumetricfactor){
-        double n = 7758;
-        double n1 = 1;
-        double n2 = 100;
-        double poes;
-        poes = ((n * reservoirArea * reservoirThickness) * 
-                    (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
-        return poes;
+         
                     
         }          
 }
