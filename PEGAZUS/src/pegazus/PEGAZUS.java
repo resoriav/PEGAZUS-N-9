@@ -43,6 +43,11 @@ public class PEGAZUS {
                     double initialLength;
                     double crossSectionalArea;
                     double modulusElasticity;
+                    double speed;
+                    double time;
+                    double aceleration;
+                    double ang;
+                    double vini;
                     
              do {
             option = printDatesMenus(input);
@@ -97,11 +102,31 @@ public class PEGAZUS {
                     calulateTheCoordinatePolar(input);
                     break;
                 case 7:  
-                    
-                    calculateAirTime(input);
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Calculate an object thrown into the air");
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter Initial Speed--> ");
+                vini=input.nextFloat();
+
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter Angle--> ");
+                ang=input.nextDouble();
+                    calculateAirTime(ang,vini);
                     break;
                 case 8:
-                    calculateDisplacement(input);
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Calculate Displacement");
+                System.out.println("Formula: x = vo*t + 1/2 a * t^2 ");
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter vo--> ");
+                speed = input.nextDouble();
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter t--> ");
+                time = input.nextDouble();
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter a-->");
+                aceleration = input.nextDouble();
+                    calculateDisplacement(speed,time,aceleration);
                     break;
                  case 9:
                     System.out.println(" Enter the value of P -> ");
@@ -261,48 +286,23 @@ public class PEGAZUS {
          polarCoordinateX= (double) Math.sqrt(X + Y);
         return (float)polarCoordinateX;
         }
-         private static void calculateAirTime(Scanner input) {
-        double total;
-        double ang;
-        double vini;
-        Scanner Entrada = new Scanner(System.in);
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Calculate Air Time");
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Enter Initial Speed--> ");
-        vini=Entrada.nextFloat();
+ private static void calculateAirTime(double ang, double vini) {
         
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Enter Angle--> ");
-        ang=Entrada.nextDouble();
-        total=(((2*vini)*Math.sin(ang))/9.8);
+        double total=(((2*vini)*Math.sin(ang))/9.8);
         
         System.out.println("****************** RESPUESTA ********************");
         System.out.println("total = (((2 *" + vini+ ") * Math.sin(" + ang + "))/9.8)");
         System.out.println("Time in the Air-->" + total + "S");
-        System.out.println();
-    }    
-         private static void calculateDisplacement(Scanner input) {
-        Scanner lector = new Scanner(System.in);
         
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Calculate Displacement");
-        System.out.println("Formula: x = vo*t + 1/2 a * t^2 ");
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Enter vo--> ");
-        double velocidad = lector.nextDouble();
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Enter t--> ");
-        double time = lector.nextDouble();
-        System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-        System.out.println("Enter a-->");
-        double aceleration = lector.nextDouble();
-        double resultado = ((velocidad * time) + (aceleration / 2) * (time * time));
-        System.out.println(" ");
+    }   
+         private static void calculateDisplacement(double speed,double time, double aceleration ) {
+        
+        double result = ((speed * time) + (aceleration / 2) * (time * time));
+       
         System.out.println("****************** RESPUESTA ********************");
-        System.out.println("x = " + velocidad + "*" + time + " + 1/2 *" + aceleration + " * " + time + "^2");
-        System.out.println("x = " + resultado);
-        System.out.println("************************************************");
+        System.out.println("x = " + speed+ "*" + time + " + 1/2 *" + aceleration + " * " + time + "^2");
+        System.out.println("x = " + result);
+        
 }
     
 }
