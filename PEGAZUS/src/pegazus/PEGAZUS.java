@@ -96,11 +96,31 @@ public class PEGAZUS {
                 case 8:
                     calculateDisplacement(input);
                     break;
-                case 9:
-                    calculateDeformation(input);
+                 case 9:
+                    System.out.println(" Enter the value of P -> ");
+                    Force = input.nextDouble();
+                    System.out.println(" Enter the value of L -> ");
+                    initialLongitud = input.nextDouble();
+                    System.out.println(" Enter the value of A -> ");
+                    areaTransversal = input.nextDouble();
+                    System.out.println(" Enter the value of E -> ");
+                    moduloElasticidad = input.nextDouble();
+                    
+                    calculateDeformation(Force, initialLongitud, areaTransversal, moduloElasticidad);
                     break;
                 case 10:
-                    calculatePoes( reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor );
+                    System.out.println(" Enter the value of A -> ");
+                    reservoirArea = input.nextDouble();
+                    System.out.println(" Enter the value of h -> ");
+                    reservoirThickness = input.nextDouble();
+                    System.out.println(" Enter the value of ø -> ");
+                    porosity = input.nextDouble();
+                    System.out.println(" Enter the value of Soi -> ");
+                    volumetricfactor = input.nextDouble();
+                    System.out.println(" Enter the value of Boi -> ");
+                    initialWaterSaturation = input.nextDouble();
+                    
+                    calculatePoes(reservoirArea ,  reservoirThickness,  initialWaterSaturation , volumetricfactor);
                     break;
                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
@@ -198,48 +218,22 @@ public class PEGAZUS {
         System.out.println("Your polar coordinate " + "➙" + polarCoordinateX + " , " + polarCoordinateY + "←");
         System.out.println();
  }
-     private static void calculatePoes(Scanner input) {
-        double n = 7758;
-        double n1 = 1;
-        double n2 = 100;
-        double reservoirArea;
-        double reservoirThickness;
-        double porosity;
-        double volumetricfactor;
-        double initialWaterSaturation;
-        double poes;
-        System.out.println(" Enter the value of A -> ");
-        reservoirArea = input.nextDouble();
-        System.out.println(" Enter the value of h -> ");
-        reservoirThickness = input.nextDouble();
-        System.out.println(" Enter the value of ø -> ");
-        porosity = input.nextDouble();
-        System.out.println(" Enter the value of Soi -> ");
-        volumetricfactor = input.nextDouble();
-        System.out.println(" Enter the value of Boi -> ");
-        initialWaterSaturation = input.nextDouble();
+    private static double calculatePoes( double n, double n2, double n1, double reservoirArea, double reservoirThickness,
+            double porosity,double volumetricfactor, double initialWaterSaturation, double poes) {
+        n2 = 100;
+        n1 = 1;
+        n = 7758;
         poes = calculatePoes(reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor);
         System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness) + " * " +
                 ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes);
+        return poes;
     }
 
-    private static void calculateDeformation(Scanner input) {
-        double deformation;
-        double Force;
-        double initialLongitud;
-        double areaTransversal;
-        double moduloElasticidad;
-        System.out.println(" Enter the value of P -> ");
-        Force = input.nextDouble();
-        System.out.println(" Enter the value of L -> ");
-        initialLongitud = input.nextDouble();
-        System.out.println(" Enter the value of A -> ");
-        areaTransversal = input.nextDouble();
-        System.out.println(" Enter the value of E -> ");
-        moduloElasticidad = input.nextDouble();
+    private static double calculateDeformation(double deformation,double Force,double initialLongitud,double areaTransversal,double moduloElasticidad) {
         deformation = formulaDeformation(Force, initialLongitud, areaTransversal, moduloElasticidad);
         System.out.println(" The deformation value is -> " + Force + " * " + initialLongitud + " / " +
                 areaTransversal + " * " + moduloElasticidad + " = " + deformation );
+        return deformation;
     }
   private static float calculateModuleCoordinateX
         (double y, double x, double pi) {
