@@ -16,8 +16,8 @@ public class PEGAZUS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner input = new Scanner(System.in);
-         boolean mainLoop = true;
+         Scanner input = new Scanner(System.in);
+        boolean mainLoop = true;
         int option;
 
              do {
@@ -63,10 +63,10 @@ public class PEGAZUS {
                     calculateDisplacement(input);
                     break;
                 case 9:
-                    
+                    calculateDeformation(input);
                     break;
                 case 10:
-                    
+                    calculatePoes(input);
                     break;
                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
@@ -90,12 +90,12 @@ public class PEGAZUS {
         System.out.println("2. -> Area of Surface");
         System.out.println("3. -> Magnitude of an Earthquake");
         System.out.println("4. -> Tidal Range");
-        System.out.println("5. -> temperature calculator");
-        System.out.println("6. -> calculate polar coordinates");
+        System.out.println("5. -> Temperature calculator");
+        System.out.println("6. -> Calculate polar coordinates");
         System.out.println("7. -> Calculate the Air and Time");
         System.out.println("8. -> Calculate Displacement -> ");
-        System.out.println("9. -> -> ");
-        System.out.println("10. ->  -> ");
+        System.out.println("9. -> -> Deformation of material ");
+        System.out.println("10. -> Calculation of Original Oil on Site ");
         System.out.println("11. -> Exit");
         System.out.println("Enter your menu option --> ");
         option = input.nextInt();
@@ -192,6 +192,49 @@ public class PEGAZUS {
         System.out.println("Your polar coordinate " + "➙" + polarCoordinateX + " , " + polarCoordinateY + "←");
         System.out.println();
  }
+     private static void calculatePoes(Scanner input) {
+        double n = 7758;
+        double n1 = 1;
+        double n2 = 100;
+        double reservoirArea;
+        double reservoirThickness;
+        double porosity;
+        double volumetricfactor;
+        double initialWaterSaturation;
+        double poes;
+        System.out.println(" Enter the value of A -> ");
+        reservoirArea = input.nextDouble();
+        System.out.println(" Enter the value of h -> ");
+        reservoirThickness = input.nextDouble();
+        System.out.println(" Enter the value of ø -> ");
+        porosity = input.nextDouble();
+        System.out.println(" Enter the value of Soi -> ");
+        volumetricfactor = input.nextDouble();
+        System.out.println(" Enter the value of Boi -> ");
+        initialWaterSaturation = input.nextDouble();
+        poes = calculatePoes(reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor);
+        System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness) + " * " +
+                ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes);
+    }
+
+    private static void calculateDeformation(Scanner input) {
+        double deformation;
+        double Force;
+        double initialLongitud;
+        double areaTransversal;
+        double moduloElasticidad;
+        System.out.println(" Enter the value of P -> ");
+        Force = input.nextDouble();
+        System.out.println(" Enter the value of L -> ");
+        initialLongitud = input.nextDouble();
+        System.out.println(" Enter the value of A -> ");
+        areaTransversal = input.nextDouble();
+        System.out.println(" Enter the value of E -> ");
+        moduloElasticidad = input.nextDouble();
+        deformation = formulaDeformation(Force, initialLongitud, areaTransversal, moduloElasticidad);
+        System.out.println(" The deformation value is -> " + Force + " * " + initialLongitud + " / " +
+                areaTransversal + " * " + moduloElasticidad + " = " + deformation );
+    }
   private static float calculateModuleCoordinateX
         (double y, double x, double pi) {
         double polarCoordinateX;
@@ -211,42 +254,40 @@ public class PEGAZUS {
          polarCoordinateX= (double) Math.sqrt(X + Y);
         return (float)polarCoordinateX;
         }
-         private static void calculateAirTime(Scanner input) {
+ private static void calculateAirTime(Scanner input) {
         double total;
         double ang;
         double vini;
-        Scanner Entrada = new Scanner(System.in);
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Calculate Air Time");
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter Initial Speed--> ");
-        vini=Entrada.nextFloat();
+        vini=input.nextFloat();
         
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter Angle--> ");
-        ang=Entrada.nextDouble();
+        ang=input.nextDouble();
         total=(((2*vini)*Math.sin(ang))/9.8);
         
         System.out.println("****************** RESPUESTA ********************");
         System.out.println("total = (((2 *" + vini+ ") * Math.sin(" + ang + "))/9.8)");
         System.out.println("Time in the Air-->" + total + "S");
         System.out.println();
-    }    
+    }     
          private static void calculateDisplacement(Scanner input) {
-        Scanner lector = new Scanner(System.in);
-        
+                
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Calculate Displacement");
         System.out.println("Formula: x = vo*t + 1/2 a * t^2 ");
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter vo--> ");
-        double velocidad = lector.nextDouble();
+        double velocidad = input.nextDouble();
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter t--> ");
-        double time = lector.nextDouble();
+        double time = input.nextDouble();
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter a-->");
-        double aceleration = lector.nextDouble();
+        double aceleration = input.nextDouble();
         double resultado = ((velocidad * time) + (aceleration / 2) * (time * time));
         System.out.println(" ");
         System.out.println("****************** RESPUESTA ********************");
@@ -254,5 +295,22 @@ public class PEGAZUS {
         System.out.println("x = " + resultado);
         System.out.println("************************************************");
 }
-         
+        public static  double formulaDeformation (double Force1, double initialLongitud1, 
+            double areaTransversal1, double moduloElasticidad1){
+        double deformation;
+        deformation = (Force1 * initialLongitud1) / (areaTransversal1 * moduloElasticidad1);
+        return deformation;
+        
+    }  
+       public static double calculatePoes (double reservoirArea , double reservoirThickness 
+                , double initialWaterSaturation , double volumetricfactor){
+        double n = 7758;
+        double n1 = 1;
+        double n2 = 100;
+        double poes;
+        poes = ((n * reservoirArea * reservoirThickness) * 
+                    (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
+        return poes; 
+                    
+        }          
 }
