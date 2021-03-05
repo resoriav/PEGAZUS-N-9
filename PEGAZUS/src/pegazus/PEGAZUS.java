@@ -138,7 +138,19 @@ public class PEGAZUS {
         System.out.println(" Area of Surface -->" + area);
     }
 
-    
+    private static void takeOutThePerimeterOfPlot(Scanner input) {
+        double number1;
+        double number2;
+        double number3;
+        double perimeter;
+        System.out.println(" Enter Side1 -> ");
+        number1 = input.nextFloat();
+        System.out.println(" Enter Side2 -> ");
+        number2 = input.nextFloat();
+        System.out.println(" Enter Side3 -> ");
+        number3 = input.nextFloat();
+        perimeter = number1 + number2 + number3;
+        System.out.println(" Perimeter of  Plot is --> " + perimeter);
     }
     private static void takeOutTheTemperatureCalculator(Scanner input){
         double F;
