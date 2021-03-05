@@ -227,10 +227,7 @@ public class PEGAZUS {
         ang=Entrada.nextDouble();
         total=(((2*vini)*Math.sin(ang))/9.8);
         
-        System.out.println("****************** RESPUESTA ********************");
-        System.out.println("total = (((2 *" + vini+ ") * Math.sin(" + ang + "))/9.8)");
-        System.out.println("Time in the Air-->" + total + "S");
-        System.out.println();
+       
     }    
          private static void calculateDisplacement(Scanner input) {
         Scanner lector = new Scanner(System.in);
