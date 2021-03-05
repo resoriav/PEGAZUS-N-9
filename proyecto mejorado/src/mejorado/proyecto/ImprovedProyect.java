@@ -65,10 +65,10 @@ public class ImprovedProyect {
                     calculateDisplacement(input);
                     break;
                 case 9:
-                    
+                    calculateDeformation(input);
                     break;
                 case 10:
-                    
+                    calculatePoes(input);
                     break;
                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
@@ -93,11 +93,11 @@ public class ImprovedProyect {
         System.out.println("3. -> Magnitude of an Earthquake");
         System.out.println("4. -> Tidal Range");
         System.out.println("5. -> temperature calculator");
-        System.out.println("6. -> calculate polar coordinates");
+        System.out.println("6. -> Calculate polar coordinates");
         System.out.println("7. -> Calculate the Air and Time");
         System.out.println("8. -> Calculate Displacement -> ");
-        System.out.println("9. -> -> ");
-        System.out.println("10. ->  -> ");
+        System.out.println("9. -> -> Deformation of a material ");
+        System.out.println("10. -> Calculation of Original Oil on Site ");
         System.out.println("11. -> Exit");
         System.out.println("Enter your menu option --> ");
         option = input.nextInt();
@@ -194,6 +194,49 @@ public class ImprovedProyect {
         System.out.println("Your polar coordinate " + "➙" + polarCoordinateX + " , " + polarCoordinateY + "←");
         System.out.println();
  }
+     private static void calculatePoes(Scanner input) {
+        double n = 7758;
+        double n1 = 1;
+        double n2 = 100;
+        double reservoirArea;
+        double reservoirThickness;
+        double porosity;
+        double volumetricfactor;
+        double initialWaterSaturation;
+        double poes;
+        System.out.println(" Enter the value of A -> ");
+        reservoirArea = input.nextDouble();
+        System.out.println(" Enter the value of h -> ");
+        reservoirThickness = input.nextDouble();
+        System.out.println(" Enter the value of ø -> ");
+        porosity = input.nextDouble();
+        System.out.println(" Enter the value of Soi -> ");
+        volumetricfactor = input.nextDouble();
+        System.out.println(" Enter the value of Boi -> ");
+        initialWaterSaturation = input.nextDouble();
+        poes = calculatePoes(reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor);
+        System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness) + " * " +
+                ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes);
+    }
+
+    private static void calculateDeformation(Scanner input) {
+        double deformation;
+        double Force;
+        double initialLongitud;
+        double areaTransversal;
+        double moduloElasticidad;
+        System.out.println(" Enter the value of P -> ");
+        Force = input.nextDouble();
+        System.out.println(" Enter the value of L -> ");
+        initialLongitud = input.nextDouble();
+        System.out.println(" Enter the value of A -> ");
+        areaTransversal = input.nextDouble();
+        System.out.println(" Enter the value of E -> ");
+        moduloElasticidad = input.nextDouble();
+        deformation = formulaDeformation(Force, initialLongitud, areaTransversal, moduloElasticidad);
+        System.out.println(" The deformation value is -> " + Force + " * " + initialLongitud + " / " +
+                areaTransversal + " * " + moduloElasticidad + " = " + deformation );
+    }
   private static float calculateModuleCoordinateX
         (double y, double x, double pi) {
         double polarCoordinateX;
@@ -256,5 +299,22 @@ public class ImprovedProyect {
         System.out.println("x = " + resultado);
         System.out.println("************************************************");
 }
-         
+         public static  double formulaDeformation (double Force1, double initialLongitud1, 
+            double areaTransversal1, double moduloElasticidad1){
+        double deformation;
+        deformation = (Force1 * initialLongitud1) / (areaTransversal1 * moduloElasticidad1);
+        return deformation;
+        
+    }  
+       public static double calculatePoes (double reservoirArea , double reservoirThickness 
+                , double initialWaterSaturation , double volumetricfactor){
+        double n = 7758;
+        double n1 = 1;
+        double n2 = 100;
+        double poes;
+        poes = ((n * reservoirArea * reservoirThickness) * 
+                    (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
+        return poes;
+                    
+        }          
 }
