@@ -36,6 +36,13 @@ public class PEGAZUS {
                     double reservoirThickness = 0;
                     double initialWaterSaturation = 0;
                     double volumetricfactor = 0;
+                    double initialWaterSaturation;
+                    double poes;
+                    double deformation;
+                    double Force;
+                    double initialLongitud;
+                    double areaTransversal;
+                    double moduloElasticidad;
                     
              do {
             option = printDatesMenus(input);
