@@ -33,9 +33,9 @@ public class PEGAZUS {
                     double bandwidth;
                     double area = 0;
                     double reservoirArea = 0;
-                    double reservoirThickness = 0;
-                    double initialWaterSaturation = 0;
-                    double volumetricfactor = 0;
+                    double reservoirThickness;
+                    double initialWaterSaturation;
+                    double volumetricfactor;
                     double initialWaterSaturation;
                     double poes;
                     double deformation;
