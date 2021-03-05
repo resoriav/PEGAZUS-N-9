@@ -36,7 +36,7 @@ public class PEGAZUS {
                     double reservoirThickness;
                     double initialWaterSaturation;
                     double volumetricfactor;
-                    double initialWaterSaturation;
+                    double porosity;
                     double poes;
                     double deformation;
                     double Force;
@@ -51,8 +51,7 @@ public class PEGAZUS {
                     
              do {
             option = printDatesMenus(input);
-            option = input.nextInt();
-           
+                       
             switch (option) {
 
                 case 1:
