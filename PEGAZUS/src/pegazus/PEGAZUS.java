@@ -40,9 +40,9 @@ public class PEGAZUS {
                     double poes;
                     double deformation;
                     double Force;
-                    double initialLongitud;
-                    double areaTransversal;
-                    double moduloElasticidad;
+                    double initialLength;
+                    double crossSectionalArea;
+                    double modulusElasticity;
                     
              do {
             option = printDatesMenus(input);
@@ -107,13 +107,13 @@ public class PEGAZUS {
                     System.out.println(" Enter the value of P -> ");
                     Force = input.nextDouble();
                     System.out.println(" Enter the value of L -> ");
-                    initialLongitud = input.nextDouble();
+                    initialLength = input.nextDouble();
                     System.out.println(" Enter the value of A -> ");
-                    areaTransversal = input.nextDouble();
+                    crossSectionalArea = input.nextDouble();
                     System.out.println(" Enter the value of E -> ");
-                    moduloElasticidad = input.nextDouble();
+                    modulusElasticity = input.nextDouble();
                     
-                    calculateDeformation(Force, initialLongitud, areaTransversal, moduloElasticidad);
+                    calculateDeformation(Force, initialLength, crossSectionalArea, modulusElasticity);
                     break;
                 case 10:
                     System.out.println(" Enter the value of A -> ");
@@ -225,24 +225,24 @@ public class PEGAZUS {
         System.out.println("Your polar coordinate " + "➙" + polarCoordinateX + " , " + polarCoordinateY + "←");
         System.out.println();
  }
-    private static double calculatePoes( double n, double n2, double n1, double reservoirArea, double reservoirThickness,
-            double porosity,double volumetricfactor, double initialWaterSaturation, double poes) {
-        n2 = 100;
-        n1 = 1;
-        n = 7758;
-        poes = calculatePoes(reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor);
-        System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness) + " * " +
-                ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes);
-        return poes;
-    }
-
-    private static double calculateDeformation(double deformation,double Force,double initialLongitud,double areaTransversal,double moduloElasticidad) {
-        deformation = formulaDeformation(Force, initialLongitud, areaTransversal, moduloElasticidad);
-        System.out.println(" The deformation value is -> " + Force + " * " + initialLongitud + " / " +
-                areaTransversal + " * " + moduloElasticidad + " = " + deformation );
+     private static  double calculateDeformation (double Force, double initialLength, 
+            double crossSectionalArea, double modulusElasticity){
+        double deformation;
+        deformation = (Force * initialLength) / (crossSectionalArea * modulusElasticity);
         return deformation;
+        
+    }  
+     private static double calculatePoes (double reservoirArea , double reservoirThickness 
+                , double initialWaterSaturation , double volumetricfactor){
+        double n = 7758;
+        double n1 = 1;
+        double n2 = 100;
+        double poes;
+        poes = ((n * reservoirArea * reservoirThickness) * 
+                    (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
+        return poes; 
     }
-  private static float calculateModuleCoordinateX
+     private static float calculateModuleCoordinateX
         (double y, double x, double pi) {
         double polarCoordinateX;
         polarCoordinateX = (double) Math.atan(y / x) * (180 / pi);
@@ -304,23 +304,5 @@ public class PEGAZUS {
         System.out.println("x = " + resultado);
         System.out.println("************************************************");
 }
-        public static  double formulaDeformation (double Force1, double initialLongitud1, 
-            double areaTransversal1, double moduloElasticidad1){
-        double deformation;
-        deformation = (Force1 * initialLongitud1) / (areaTransversal1 * moduloElasticidad1);
-        return deformation;
-        
-    }  
-       public static double calculatePoes (double reservoirArea , double reservoirThickness 
-                , double initialWaterSaturation , double volumetricfactor){
-        double n = 7758;
-        double n1 = 1;
-        double n2 = 100;
-        double poes;
-        poes = ((n * reservoirArea * reservoirThickness) * 
-                    (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
-        return poes; 
-        
-    }
     
 }
