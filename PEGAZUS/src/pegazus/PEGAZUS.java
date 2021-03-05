@@ -16,36 +16,70 @@ public class PEGAZUS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         Scanner input = new Scanner(System.in);
-        boolean mainLoop = true;
+           Scanner input = new Scanner(System.in);
+     boolean mainLoop = true;
         int option;
-
-             do {
-            option = printDatesMenus(input);
                     double number1;
                     double number2;
                     double number3;
-                    double perimeter;
+                    double perimeter=0;
+                    float tallheight;
+                    float lowheight;
+                    float amplitude1 = 0;
+                    float amplitude;
+                    float timevariation;
+                    float magnitude = 0;
+                    double equivalentdistances;
+                    double bandwidth;
+                    double area = 0;
+                    double reservoirArea = 0;
+                    double reservoirThickness = 0;
+                    double initialWaterSaturation = 0;
+                    double volumetricfactor = 0;
+                    
+             do {
+            option = printDatesMenus(input);
+            option = input.nextInt();
            
             switch (option) {
 
                 case 1:
-                    takeOutThePerimeterOfPlot(input);
+                     System.out.println(" Enter Side1 -> ");
+                     number1 = input.nextFloat();
+                     System.out.println(" Enter Side2 -> ");
+                     number2 = input.nextFloat();
+                     System.out.println(" Enter Side3 -> ");
+                     number3 = input.nextFloat();
+                    
+                    takeOutThePerimeterOfPlot( number1, number2, number3, perimeter);
                     break;
                 
                 case 2:
+                     System.out.println(" Enter length Of Terrain -> ");
+                     equivalentdistances = input.nextFloat();
+                     System.out.println(" Enter Terrain Width-> ");
+                     bandwidth = input.nextFloat();
                   
-                    calculateTheAreaOfSurface(input);
+                    calculateTheAreaOfSurface(equivalentdistances, bandwidth, area);
                     break;
                
                 case 3:
+                     System.out.println(" Amplitude -> ");
+                     amplitude = input.nextFloat();
+                     System.out.println(" Time of varation -> ");
+                     timevariation = input.nextFloat();
                    
-                    calculateMagnitudeOfAnEarthquake(input);
+                    calculateMagnitudeOfAnEarthquake( amplitude, timevariation,  magnitude);
                     break;
                
                 case 4:
+                     System.out.println(" Tallheight -> ");
+                     tallheight = input.nextFloat();
+                     System.out.println(" Lowheight -> ");
+                     lowheight = input.nextFloat();
                     
-                    calculateWaveRange(input);
+                     calculateWaveRange( tallheight, lowheight, amplitude1);
+                    
                     break;
                 case 5 :
                     
@@ -66,7 +100,7 @@ public class PEGAZUS {
                     calculateDeformation(input);
                     break;
                 case 10:
-                    calculatePoes(input);
+                    calculatePoes( reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor );
                     break;
                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
@@ -102,51 +136,27 @@ public class PEGAZUS {
         return option;
     }
 
-    private static void calculateWaveRange(Scanner input) {
-        float tallheight;
-        float lowheight;
-        float amplitude1;
-        System.out.println(" Tallheight -> ");
-        tallheight = input.nextFloat();
-        System.out.println(" Lowheight -> ");
-        lowheight = input.nextFloat();
+    private static float calculateWaveRange(float tallheight, float lowheight, float amplitude1 ) {
+       
         amplitude1= tallheight - lowheight;
-        System.out.println(" Tidal Range " + amplitude1);
+       return amplitude1;
     }
 
-    private static void calculateMagnitudeOfAnEarthquake(Scanner input) {
-        float amplitude;
-        float timevariation;
-        float magnitude;
-        System.out.println(" Amplitude -> ");
-        amplitude = input.nextFloat();
-        System.out.println(" Time of varation -> ");
-        timevariation = input.nextFloat();
+    private static float calculateMagnitudeOfAnEarthquake( float amplitude, float timevariation, float magnitude) {
         magnitude = (float)(Math.log10(amplitude)+ 3 * Math.log10(8 * timevariation)-2.85);
         System.out.println(" Magnitude of an Earthquake " + magnitude);
+        return  magnitude;
     }
 
-    private static void calculateTheAreaOfSurface(Scanner input) {
-        double equivalentdistances;
-        double bandwidth;
-        double area;
-        System.out.println(" Enter Equivalentdistances -> ");
-        equivalentdistances = input.nextFloat();
-        System.out.println(" Enter Bandwidth -> ");
-        bandwidth = input.nextFloat();
-        area = equivalentdistances*bandwidth ;
-        System.out.println(" Area of Surface -->" + area);
+    private static double calculateTheAreaOfSurface( double lengthOfTerrain, double terrainWidth, double area) {
+        area = lengthOfTerrain*terrainWidth ;
+        return area;
     }
 
-    private static double takeOutThePerimeterOfPlot(double number1, double number2, double number3,double perimeter) {
-        System.out.println(" Enter Side1 -> ");
-        number1 = input.nextFloat();
-        System.out.println(" Enter Side2 -> ");
-        number2 = input.nextFloat();
-        System.out.println(" Enter Side3 -> ");
-        number3 = input.nextFloat();
+    private static double takeOutThePerimeterOfPlot( double number1, double number2, double number3, double perimeter) {
+       
         perimeter = number1 + number2 + number3;
-        System.out.println(" Perimeter of  Plot is --> " + perimeter);
+         return perimeter;
     }
     private static void takeOutTheTemperatureCalculator(Scanner input){
         double F;
@@ -250,40 +260,42 @@ public class PEGAZUS {
          polarCoordinateX= (double) Math.sqrt(X + Y);
         return (float)polarCoordinateX;
         }
- private static void calculateAirTime(Scanner input) {
+         private static void calculateAirTime(Scanner input) {
         double total;
         double ang;
         double vini;
+        Scanner Entrada = new Scanner(System.in);
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Calculate Air Time");
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter Initial Speed--> ");
-        vini=input.nextFloat();
+        vini=Entrada.nextFloat();
         
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter Angle--> ");
-        ang=input.nextDouble();
+        ang=Entrada.nextDouble();
         total=(((2*vini)*Math.sin(ang))/9.8);
         
         System.out.println("****************** RESPUESTA ********************");
         System.out.println("total = (((2 *" + vini+ ") * Math.sin(" + ang + "))/9.8)");
         System.out.println("Time in the Air-->" + total + "S");
         System.out.println();
-    }     
+    }    
          private static void calculateDisplacement(Scanner input) {
-                
+        Scanner lector = new Scanner(System.in);
+        
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Calculate Displacement");
         System.out.println("Formula: x = vo*t + 1/2 a * t^2 ");
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter vo--> ");
-        double velocidad = input.nextDouble();
+        double velocidad = lector.nextDouble();
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter t--> ");
-        double time = input.nextDouble();
+        double time = lector.nextDouble();
         System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
         System.out.println("Enter a-->");
-        double aceleration = input.nextDouble();
+        double aceleration = lector.nextDouble();
         double resultado = ((velocidad * time) + (aceleration / 2) * (time * time));
         System.out.println(" ");
         System.out.println("****************** RESPUESTA ********************");
@@ -307,6 +319,7 @@ public class PEGAZUS {
         poes = ((n * reservoirArea * reservoirThickness) * 
                     (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
         return poes; 
-                    
-        }          
+        
+    }
+    
 }
