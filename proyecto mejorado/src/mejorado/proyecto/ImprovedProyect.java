@@ -92,11 +92,11 @@ public class ImprovedProyect {
         System.out.println("2. -> Area of Surface");
         System.out.println("3. -> Magnitude of an Earthquake");
         System.out.println("4. -> Tidal Range");
-        System.out.println("5. -> temperature calculator");
+        System.out.println("5. -> Temperature calculator");
         System.out.println("6. -> Calculate polar coordinates");
         System.out.println("7. -> Calculate the Air and Time");
         System.out.println("8. -> Calculate Displacement -> ");
-        System.out.println("9. -> -> Deformation of a material ");
+        System.out.println("9. -> -> Deformation of material ");
         System.out.println("10. -> Calculation of Original Oil on Site ");
         System.out.println("11. -> Exit");
         System.out.println("Enter your menu option --> ");
