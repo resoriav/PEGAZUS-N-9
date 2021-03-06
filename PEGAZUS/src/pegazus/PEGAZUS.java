@@ -20,6 +20,7 @@ public class PEGAZUS {
    
           boolean mainLoop = true;
         int option;
+        option = input.nextInt();
 
              do {
             option = printDatesMenus(input);
@@ -210,19 +211,19 @@ public class PEGAZUS {
         temperature= celsius + 273.15;
         System.out.println(" The temperature in " + temperature + " °k ");
 }
-public static void calculateAcceleration(double finalSpeed, double initialVelocity,
+    public static void calculateAcceleration(double finalSpeed, double initialVelocity,
                     double time, double aceleration ) {
     aceleration= (finalSpeed - initialVelocity)/time;
     
     System.out.println(" The aceleration is " + aceleration + " m/s^2 "); 
  }
-private static void calculateTheWeightOfaRock(double weightR, double specificGravity,
+    private static void calculateTheWeightOfaRock(double weightR, double specificGravity,
                     double weightW, double rockVolume) {
     weightR=  specificGravity *  weightW * rockVolume;
     System.out.println(" The Rock Weight " + weightR + " N/m " ); 
         
     }
-private static void calculateRiverDisplacement(double speed,double time2, double aceleration2 ) {
+    private static void calculateRiverDisplacement(double speed,double time2, double aceleration2 ) {
         
         double result = ((speed * time2) + (aceleration2 / 2) * (time2 * time2));
        
@@ -230,7 +231,7 @@ private static void calculateRiverDisplacement(double speed,double time2, double
         System.out.println("x = " + speed+ "*" + time2 + " + 1/2 *" + aceleration2 + " * " + time2 + "^2");
         System.out.println("x = " + result + " m/s ");
 }
-private static  double calculateDeformation (double Force, double initialLength, 
+    private static  double calculateDeformation (double Force, double initialLength, 
             double crossSectionalArea, double modulusElasticity){
         double deformation;
         deformation = (Force * initialLength) / (crossSectionalArea * modulusElasticity);
@@ -240,7 +241,7 @@ private static  double calculateDeformation (double Force, double initialLength,
         return deformation;
         
     }  
- private static double calculatePoes (double reservoirArea , double reservoirThickness 
+     private static double calculatePoes (double reservoirArea , double reservoirThickness 
                 , double initialWaterSaturation , double volumetricfactor){
         double n = 7758;
         double n1 = 1;
@@ -268,7 +269,6 @@ private static  double calculateDeformation (double Force, double initialLength,
         System.out.println("10. -> Calculate Oil on Site ");
         System.out.println("11. -> Exit");
         System.out.println("Enter your menu option --> ");
-        option = input.nextInt();
         return option;
     }   
 
