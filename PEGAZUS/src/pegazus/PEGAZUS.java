@@ -104,3 +104,50 @@ public class PEGAZUS {
                     celsius = input.nextDouble();
                     takeOutTheTemperatureCalculator( celsius, temperature);
                     break;
+                case 6:
+                    System.out.println(" Enter the final Speed -> " + " m/s ");
+                     finalSpeed = input.nextFloat();
+                     System.out.println(" Enter the initilVelocity -> " + " m/s ");
+                     initialVelocity = input.nextFloat();
+                     System.out.println(" Enter the time -> " + " s ");
+                     time=input.nextFloat();
+                    calculateAcceleration(finalSpeed, initialVelocity, time, aceleration);
+                    break;
+                case 7:  
+                    System.out.println(" Enter the specific Gravity -> " );
+                    specificGravity = input.nextFloat();
+                    System.out.println(" Enter the water weight -> " + "N/(m)^3");
+                    weightW= input.nextFloat();
+                    System.out.println(" Enter the rock Volume -> " + "m^2");
+                    rockVolume=input.nextFloat();
+                   calculateTheWeightOfaRock( weightR, specificGravity, weightW, rockVolume);
+                    break;
+                case 8:
+                    System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Calculate Displacement");
+                System.out.println("Formula: x = vo*t + 1/2 a * t^2 ");
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter vo--> " + "m/s");
+                speed = input.nextDouble();
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter t--> " + "s");
+                time2 = input.nextDouble();
+                System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
+                System.out.println("Enter a-->" + "m/s^2");
+                aceleration2 = input.nextDouble();
+                    calculateRiverDisplacement(speed,time2 ,aceleration2);
+                    
+                    break;
+                case 9:
+                        System.out.println(" Enter the value of Applied Force -> " + "kg");
+                    Force = input.nextDouble();
+                    System.out.println(" Enter the Lenght of -> " + "m");
+                    initialLength = input.nextDouble();
+                    System.out.println(" Enter the Cross-sectional Area -> "+ "m^2");
+                    crossSectionalArea = input.nextDouble();
+                    System.out.println(" Enter the value of Modulus of Elasticity -> "+ "kg/cm^3");
+                    modulusElasticity = input.nextDouble();
+                    
+                    calculateDeformation(Force, initialLength, crossSectionalArea, modulusElasticity);
+                    
+                    break;
