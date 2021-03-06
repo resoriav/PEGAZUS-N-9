@@ -188,3 +188,44 @@ public class PEGAZUS {
     }
    private static void calculateTheAreaOfSurface(double equivalentdistances,
         double terrainWidth, double area) {
+        
+        area = equivalentdistances*terrainWidth ;
+        System.out.println(" Area of Surface -->" + area + " m ^2 ");
+    }
+   private static void calculateMagnitudeOfAnEarthquake( float amplitude,
+        float timevariation, float magnitude) {
+       
+        
+        magnitude = (float)(Math.log10(amplitude)+ 3 * Math.log10(8 * timevariation)-2.85);
+        System.out.println(" Magnitude of an Earthquake " + magnitude + " Grados en la escala de Richter ");
+    }
+    private static void calculateWaveRange( float waveheight,
+        float  reacWheight, float amplitude1) {
+        amplitude1= waveheight -  reacWheight;
+        System.out.println(" Tidal Range " + amplitude1);
+    }
+    private static void takeOutTheTemperatureCalculator(double celsius,
+        double temperature){
+        
+        temperature= celsius + 273.15;
+        System.out.println(" The temperature in " + temperature + " °k ");
+}
+public static void calculateAcceleration(double finalSpeed, double initialVelocity,
+                    double time, double aceleration ) {
+    aceleration= (finalSpeed - initialVelocity)/time;
+    
+    System.out.println(" The aceleration is " + aceleration + " m/s^2 "); 
+ }
+private static void calculateTheWeightOfaRock(double weightR, double specificGravity,
+                    double weightW, double rockVolume) {
+    weightR=  specificGravity *  weightW * rockVolume;
+    System.out.println(" The Rock Weight " + weightR + " N/m " ); 
+        
+    }
+private static void calculateRiverDisplacement(double speed,double time2, double aceleration2 ) {
+        
+        double result = ((speed * time2) + (aceleration2 / 2) * (time2 * time2));
+       
+        System.out.println("** RESPUESTA ****");
+        System.out.println("x = " + speed+ "*" + time2 + " + 1/2 *" + aceleration2 + " * " + time2 + "^2");
+        System.out.println("x = " + result + " m/s ");
