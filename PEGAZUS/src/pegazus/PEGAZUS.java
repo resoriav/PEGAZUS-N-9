@@ -62,4 +62,45 @@ public class PEGAZUS {
                     double Force;
                     double initialLength;
                     double crossSectionalArea;
-                    double modulusElasticity;      
+                    double modulusElasticity;  
+               
+             switch (option) {
+
+                case 1:
+                     System.out.println(" Enter Side1 -> " + " m ");
+                     number1 = input.nextFloat();
+                     System.out.println(" Enter Side2 -> " + " m ");
+                     number2 = input.nextFloat();
+                     System.out.println(" Enter Side3 -> " + " m ");
+                     number3 = input.nextFloat();
+                     takeOutThePerimeterOfPlot( number1, number2, number3, perimeter);
+                     break;
+                
+                case 2:
+                  System.out.println(" Enter length Of Terrain -> " + " m ");
+                  equivalentdistances = input.nextFloat();
+                  System.out.println(" Enter Terrain Width -> " + " m ");
+                  terrainWidth = input.nextFloat();
+                    calculateTheAreaOfSurface(equivalentdistances,terrainWidth, area);
+                    break;
+               
+                case 3:
+                   System.out.println(" Amplitude -> " + " km ");
+                   amplitude = input.nextFloat();
+                   System.out.println(" Time of varation -> " + " s ");
+                   timevariation = input.nextFloat();
+                    calculateMagnitudeOfAnEarthquake(amplitude, timevariation, magnitude);
+                    break;
+               
+                case 4:
+                     System.out.println(" Wave Lenght -> " + " km ");
+                     waveheight = input.nextFloat();
+                     System.out.println(" Life time of Wave -> " + " s ");
+                     reacWheight = input.nextFloat();
+                     calculateWaveRange( waveheight, reacWheight, amplitude1);
+                    break;
+                case 5 :
+                    System.out.println(" insert temperature in °C -> ");
+                    celsius = input.nextDouble();
+                    takeOutTheTemperatureCalculator( celsius, temperature);
+                    break;
