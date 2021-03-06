@@ -151,3 +151,40 @@ public class PEGAZUS {
                     calculateDeformation(Force, initialLength, crossSectionalArea, modulusElasticity);
                     
                     break;
+                 case 10:
+                    System.out.println(" Enter the Area of Deposit -> " + "acres");
+                    reservoirArea = input.nextDouble();
+                    System.out.println(" Enter the Depth of Deposit -> " + "km");
+                    reservoirThickness = input.nextDouble();
+                    System.out.println(" Enter the value of Porosity ø -> " + "%");
+                    porosity = input.nextDouble();
+                    System.out.println(" Enter the value of Volumetric Factor -> " + "m^3");
+                    volumetricfactor = input.nextDouble();
+                    System.out.println(" Enter the value of initial water saturation -> " + "%");
+                    initialWaterSaturation = input.nextDouble();
+                    
+                    calculatePoes(reservoirArea ,  reservoirThickness,  initialWaterSaturation , volumetricfactor);               
+                            
+                    break;
+                case 11:
+                    System.out.println(" THANKKS FOR USING OUR PROGRAM ");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid option\n\n\n");
+                    break;
+
+            }
+
+        } while (option != 11);
+        
+        
+    }
+ private static void takeOutThePerimeterOfPlot(double number1,double number2,
+         double number3, double perimeter) {
+    
+        perimeter = number1 + number2 + number3;
+        System.out.println(" Perimeter of  Plot is --> " + perimeter + " m ");
+    }
+   private static void calculateTheAreaOfSurface(double equivalentdistances,
+        double terrainWidth, double area) {
