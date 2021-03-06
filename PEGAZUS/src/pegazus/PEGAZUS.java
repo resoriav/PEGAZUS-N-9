@@ -16,4 +16,50 @@ public class PEGAZUS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         
+   Scanner input = new Scanner(System.in);
+   
+          boolean mainLoop = true;
+        int option;
+
+             do {
+            option = printDatesMenus(input);
+                    double number1;
+                    double number2;
+                    double number3;
+                    double perimeter = 0;
+                    double equivalentdistances;
+                    double terrainWidth;
+                    double area = 0;
+                    float amplitude;
+                    float timevariation;
+                    float magnitude = 0;
+                    float waveheight;
+                    float reacWheight;
+                    float amplitude1 = 0;
+                    double celsius;
+                    double temperature = 0;
+                    double finalSpeed;
+                    double initialVelocity;
+                    double time;
+                    double aceleration = 0;
+                    double weightR = 0;
+                    double specificGravity;
+                    double weightW;
+                    double rockVolume;
+                    double speed;
+                    double time2;
+                    double aceleration2;
+                    double n = 7758;
+                    double n1 = 1;
+                    double n2 = 100;
+                    double reservoirArea;
+                    double reservoirThickness;
+                    double porosity;
+                    double volumetricfactor;
+                    double initialWaterSaturation;
+                    double poes;
+                    double deformation;
+                    double Force;
+                    double initialLength;
+                    double crossSectionalArea;
+                    double modulusElasticity;      
