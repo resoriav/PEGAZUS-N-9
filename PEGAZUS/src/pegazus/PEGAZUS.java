@@ -20,7 +20,7 @@ public class PEGAZUS {
    
           boolean mainLoop = true;
         int option;
-        option = input.nextInt();
+        
 
              do {
             option = printDatesMenus(input);
@@ -270,6 +270,7 @@ public class PEGAZUS {
         System.out.println("11. -> Exit");
         System.out.println("Enter your menu option --> ");
         return option;
+        option = input.nextInt();
     }   
 
 }
