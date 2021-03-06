@@ -1,4 +1,10 @@
 package pegazus;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pegazus;
 import java.util.Scanner;
 /**
  *
@@ -10,9 +16,9 @@ public class PEGAZUS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double number1;
-        double number2;
-        double number3;
+        double side1;
+        double side2;
+        double side3;
         double perimeter = 0;
         double equivalentdistances;
         double terrainWidth;
@@ -46,7 +52,7 @@ public class PEGAZUS {
         double initialWaterSaturation;
         double poes;
         double deformation;
-        double Force;
+        double force;
         double initialLength;
         double crossSectionalArea;
         double modulusElasticity;
@@ -64,13 +70,13 @@ public class PEGAZUS {
 
                 case 1:
                     System.out.println(" Enter Side1 -> " + " m ");
-                    number1 = input.nextFloat();
+                    side1 = input.nextFloat();
                     System.out.println(" Enter Side2 -> " + " m ");
-                    number2 = input.nextFloat();
+                    side2 = input.nextFloat();
                     System.out.println(" Enter Side3 -> " + " m ");
-                    number3 = input.nextFloat();
+                    side3 = input.nextFloat();
                       
-                    perimeter = takeOutThePerimeterOfPlot(number1, number2, number3);
+                    perimeter = takeOutThePerimeterOfPlot(side1, side2, side3);
                     System.out.println(" Perimeter of  Plot is --> " + perimeter + " m ");
                     break;
 
@@ -89,16 +95,16 @@ public class PEGAZUS {
                     System.out.println(" Time of varation -> " + " s ");
                     timevariation = input.nextFloat();
                     magnitude = calculateMagnitudeOfAnEarthquake(amplitude, timevariation);
-                    System.out.println(" Magnitude of an Earthquake " + magnitude + " Grados en la escala de Richter ");
+                    System.out.println(" Magnitude of an Earthquake " + magnitude + " Degrees on the Richter scale ");
                     break;
 
                 case 4:
-                    System.out.println(" Wave Lenght -> " + " km ");
+                    System.out.println(" Wave Lenght -> " + " m ");
                     waveheight = input.nextFloat();
                     System.out.println(" Life time of Wave -> " + " s ");
                     reacWheight = input.nextFloat();
                     amplitude1 = calculateWaveRange(waveheight, reacWheight);
-                     System.out.println(" Tidal Range " + amplitude1);
+                     System.out.println(" Tidal Range " + amplitude1 + " m ");
                     break;
                 case 5:
                     System.out.println(" insert temperature in °C -> ");
@@ -109,7 +115,7 @@ public class PEGAZUS {
                 case 6:
                     System.out.println(" Enter the final Speed -> " + " m/s ");
                     finalSpeed = input.nextFloat();
-                    System.out.println(" Enter the initilVelocity -> " + " m/s ");
+                    System.out.println(" Enter the initial Velocity -> " + " m/s ");
                     initialVelocity = input.nextFloat();
                     System.out.println(" Enter the time -> " + " s ");
                     time = input.nextFloat();
@@ -127,26 +133,20 @@ public class PEGAZUS {
                     System.out.println(" The Rock Weight " + weightR + " N/m ");
                     break;
                 case 8:
-                    System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-                    System.out.println("Calculate Displacement");
-                    System.out.println("Formula: x = vo*t + 1/2 a * t^2 ");
-                    System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-                    System.out.println("Enter vo--> " + "m/s");
+                    System.out.println("Enter Vo River --> " + "m/s");
                     speed = input.nextDouble();
-                    System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-                    System.out.println("Enter t--> " + "s");
+                    System.out.println("Enter time--> " + "s");
                     time2 = input.nextDouble();
-                    System.out.println("↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓");
-                    System.out.println("Enter a-->" + "m/s^2");
+                    System.out.println("Enter aceleration-->" + "m/s^2");
                     aceleration2 = input.nextDouble();
                     result = calculateRiverDisplacement(speed, time2, aceleration2);
                     System.out.println("** RESPUESTA ****");
-                    System.out.println("x = " + speed + "*" + time2 + " + 1/2 *" + aceleration2 + " * " + time2 + "^2");
-                    System.out.println("x = " + result + " m/s ");
+                    System.out.println(" Displacemen = " + speed + "*" + time2 + " + 1/2 *" + aceleration2 + " * " + time2 + "^2");
+                    System.out.println(" Displacemen = " + result + " m/s ");
                     break;
                 case 9:
                     System.out.println(" Enter the value of Applied Force -> " + "kg");
-                    Force = input.nextDouble();
+                    force = input.nextDouble();
                     System.out.println(" Enter the Lenght of -> " + "m");
                     initialLength = input.nextDouble();
                     System.out.println(" Enter the Cross-sectional Area -> " + "m^2");
@@ -154,9 +154,9 @@ public class PEGAZUS {
                     System.out.println(" Enter the value of Modulus of Elasticity -> " + "kg/cm^3");
                     modulusElasticity = input.nextDouble();
 
-                    deformation = calculateDeformation(Force, initialLength, crossSectionalArea, modulusElasticity);
-                    System.out.println(" The deformation value is -> " + Force + " * " + initialLength + " / "
-                     + crossSectionalArea + " * " + modulusElasticity + " = " + deformation + " um/m 7"
+                    deformation = calculateDeformation(force, initialLength, crossSectionalArea, modulusElasticity);
+                    System.out.println(" The deformation value is -> " + force + " * " + initialLength + " / "
+                     + crossSectionalArea + " * " + modulusElasticity + " = " + deformation + " um/m "
                      + "");
                     break;
                 case 10:
@@ -171,9 +171,9 @@ public class PEGAZUS {
                     System.out.println(" Enter the value of initial water saturation -> " + "%");
                     initialWaterSaturation = input.nextDouble();
 
-                    poes = calculatePoes(reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor);
-                    System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness) + " * "
-                    + ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes + " acres ");
+                    poes = calculatePoes(reservoirArea, reservoirThickness, initialWaterSaturation, volumetricfactor,porosity);
+                    System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness + "*" + porosity) + " * "
+                    + ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes + " MMBls ");
                     break;
                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
@@ -189,10 +189,10 @@ public class PEGAZUS {
 
     }
 
-    private static double takeOutThePerimeterOfPlot(double number1, double number2,
-            double number3) {
+    private static double takeOutThePerimeterOfPlot(double side1, double side2,
+            double side3) {
         double perimeter;
-        perimeter = number1 + number2 + number3;
+        perimeter = side1 + side2 + side3;
         return perimeter;
     }
 
@@ -213,7 +213,7 @@ float magnitude;
     private static float calculateWaveRange(float waveheight,
             float reacWheight) {
         float amplitude1;
-        amplitude1 = waveheight - reacWheight;
+        amplitude1 = (waveheight + reacWheight)/30;
        return amplitude1;
     }
 
@@ -250,21 +250,21 @@ float magnitude;
 
     }
 
-    private static double calculateDeformation(double Force, double initialLength,
+    private static double calculateDeformation(double force, double initialLength,
             double crossSectionalArea, double modulusElasticity) {
         double deformation;
-        deformation = (Force * initialLength) / (crossSectionalArea * modulusElasticity);
+        deformation = (force * initialLength) / (crossSectionalArea * modulusElasticity);
         return deformation;
 
     }
 
     private static double calculatePoes(double reservoirArea, double reservoirThickness,
-            double initialWaterSaturation, double volumetricfactor) {
+            double initialWaterSaturation, double volumetricfactor, double porosity) {
         double n = 7758;
         double n1 = 1;
         double n2 = 100;
         double poes;
-        poes = ((n * reservoirArea * reservoirThickness)
+        poes = ((n * reservoirArea * reservoirThickness * porosity )
                 * (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
         return poes;
     }
@@ -285,7 +285,7 @@ float magnitude;
         System.out.println("4. -> Wave Range");
         System.out.println("5. -> Temperature calculator");
         System.out.println("6. -> Calculate the River Acceleration ");
-        System.out.println("7. -> calculate The Weight Of a Rock");
+        System.out.println("7. -> Calculate The Weight Of a Rock");
         System.out.println("8. -> Calculate River Displacement -> ");
         System.out.println("9. -> Deformation of material ");
         System.out.println("10. -> Calculate Oil on Site ");
