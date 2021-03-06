@@ -260,7 +260,7 @@ public class PEGAZUS {
         System.out.println("1. -> Perimeter of  Plot ");
         System.out.println("2. -> Area of Surface");
         System.out.println("3. -> Magnitude of an Earthquake");
-        System.out.println("4. -> Tidal Range");
+        System.out.println("4. -> Wave Range");
         System.out.println("5. -> Temperature calculator");
         System.out.println("6. -> Calculate the River Acceleration ");
         System.out.println("7. -> calculate The Weight Of a Rock");
