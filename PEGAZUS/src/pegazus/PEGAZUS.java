@@ -229,6 +229,7 @@ private static void calculateRiverDisplacement(double speed,double time2, double
         System.out.println("** RESPUESTA ****");
         System.out.println("x = " + speed+ "*" + time2 + " + 1/2 *" + aceleration2 + " * " + time2 + "^2");
         System.out.println("x = " + result + " m/s ");
+}
 private static  double calculateDeformation (double Force, double initialLength, 
             double crossSectionalArea, double modulusElasticity){
         double deformation;
