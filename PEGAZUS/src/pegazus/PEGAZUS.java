@@ -6,12 +6,8 @@ package pegazus;
  */
 package pegazus;
 import java.util.Scanner;
-/**
- *
- * @author Rodrigo Soria
- */
-public class PEGAZUS {
 
+public class PEGAZUS {
     /**
      * @param args the command line arguments
      */
@@ -106,12 +102,14 @@ public class PEGAZUS {
                     amplitude1 = calculateWaveRange(waveheight, reacWheight);
                      System.out.println(" Tidal Range " + amplitude1 + " m ");
                     break;
+                    
                 case 5:
                     System.out.println(" insert temperature in °C -> ");
                     celsius = input.nextDouble();
                     temperature = takeOutTheTemperatureCalculator(celsius);
                     System.out.println(" The temperature in " + temperature + " °k ");
                     break;
+                    
                 case 6:
                     System.out.println(" Enter the final Speed -> " + " m/s ");
                     finalSpeed = input.nextFloat();
@@ -122,6 +120,7 @@ public class PEGAZUS {
                     aceleration = calculateAcceleration(finalSpeed, initialVelocity, time);
                     System.out.println(" The aceleration is " + aceleration + " m/s^2 ");
                     break;
+                    
                 case 7:
                     System.out.println(" Enter the specific Gravity -> ");
                     specificGravity = input.nextFloat();
@@ -132,6 +131,7 @@ public class PEGAZUS {
                     weightR = calculateTheWeightOfaRock( rockVolume,specificGravity, weightW);
                     System.out.println(" The Rock Weight " + weightR + " N/m ");
                     break;
+                    
                 case 8:
                     System.out.println("Enter Vo River --> " + "m/s");
                     speed = input.nextDouble();
@@ -144,6 +144,7 @@ public class PEGAZUS {
                     System.out.println(" Displacemen = " + speed + "*" + time2 + " + 1/2 *" + aceleration2 + " * " + time2 + "^2");
                     System.out.println(" Displacemen = " + result + " m/s ");
                     break;
+                    
                 case 9:
                     System.out.println(" Enter the value of Applied Force -> " + "kg");
                     force = input.nextDouble();
@@ -159,6 +160,7 @@ public class PEGAZUS {
                      + crossSectionalArea + " * " + modulusElasticity + " = " + deformation + " um/m "
                      + "");
                     break;
+                    
                 case 10:
                     System.out.println(" Enter the Area of Deposit -> " + "acres");
                     reservoirArea = input.nextDouble();
@@ -175,6 +177,7 @@ public class PEGAZUS {
                     System.out.println(" The POES is -> " + ((n + " * " + reservoirArea + " * " + reservoirThickness + "*" + porosity) + " * "
                     + ((n1 + " - " + initialWaterSaturation + "/" + n2))) + " / " + (volumetricfactor) + " = " + poes + " MMBls ");
                     break;
+                    
                 case 11:
                     System.out.println(" THANKKS FOR USING OUR PROGRAM ");
                     System.exit(0);
@@ -189,55 +192,54 @@ public class PEGAZUS {
 
     }
 
-    private static double takeOutThePerimeterOfPlot(double side1, double side2,
-            double side3) {
+    private static double takeOutThePerimeterOfPlot(double side1, double side2,double side3) {
         double perimeter;
         perimeter = side1 + side2 + side3;
+        
         return perimeter;
     }
 
-    private static double calculateTheAreaOfSurface(double equivalentdistances,
-            double terrainWidth) {
+    private static double calculateTheAreaOfSurface(double equivalentdistances,double terrainWidth) {
         double area;
         area = equivalentdistances * terrainWidth;
+       
         return area;
     }
 
-    private static float calculateMagnitudeOfAnEarthquake(float amplitude,
-            float timevariation) {
-float magnitude;
+    private static float calculateMagnitudeOfAnEarthquake(float amplitude,float timevariation) {
+        float magnitude;
         magnitude = (float) (Math.log10(amplitude) + 3 * Math.log10(8 * timevariation) - 2.85);
+        
         return magnitude;
     }
 
-    private static float calculateWaveRange(float waveheight,
-            float reacWheight) {
+    private static float calculateWaveRange(float waveheight,float reacWheight) {
         float amplitude1;
         amplitude1 = (waveheight + reacWheight)/30;
-       return amplitude1;
+       
+        return amplitude1;
     }
 
-    private static double takeOutTheTemperatureCalculator(double celsius
-            ) {
+    private static double takeOutTheTemperatureCalculator(double celsius) {
         double temperature;
 
         temperature = celsius + 273.15;
-       return temperature;
+       
+        return temperature;
     }
 
-    public static double calculateAcceleration(double finalSpeed, double initialVelocity,
-            double time) {
+    public static double calculateAcceleration(double finalSpeed, double initialVelocity,double time) {
         double aceleration;
         aceleration = (finalSpeed - initialVelocity) / time;
 
         return aceleration;
     }
 
-    private static double calculateTheWeightOfaRock( double specificGravity,
-            double weightW, double rockVolume) {
+    private static double calculateTheWeightOfaRock( double specificGravity,double weightW, double rockVolume) {
         double weightR;
         weightR = specificGravity * weightW * rockVolume;
-       return weightR;
+       
+        return weightR;
 
     }
 
@@ -245,6 +247,7 @@ float magnitude;
 
         double result;
         result = ((speed * time2) + (aceleration2 / 2) * (time2 * time2));
+       
         return result;
         
 
@@ -254,6 +257,7 @@ float magnitude;
             double crossSectionalArea, double modulusElasticity) {
         double deformation;
         deformation = (force * initialLength) / (crossSectionalArea * modulusElasticity);
+        
         return deformation;
 
     }
@@ -264,8 +268,8 @@ float magnitude;
         double n1 = 1;
         double n2 = 100;
         double poes;
-        poes = ((n * reservoirArea * reservoirThickness * porosity )
-                * (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
+        poes = ((n * reservoirArea * reservoirThickness * porosity )* (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
+        
         return poes;
     }
 
@@ -274,6 +278,7 @@ float magnitude;
         Scanner input = new Scanner(System.in);
         printMenu();
         option = input.nextInt();
+        
         return option;
     }
 
@@ -286,7 +291,7 @@ float magnitude;
         System.out.println("5. -> Temperature calculator");
         System.out.println("6. -> Calculate the River Acceleration ");
         System.out.println("7. -> Calculate The Weight Of a Rock");
-        System.out.println("8. -> Calculate River Displacement -> ");
+        System.out.println("8. -> Calculate River Displacement");
         System.out.println("9. -> Deformation of material ");
         System.out.println("10. -> Calculate Oil on Site ");
         System.out.println("11. -> Exit");
