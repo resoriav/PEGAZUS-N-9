@@ -16,9 +16,9 @@ public class pegazusController {
     public double magnitude;
     public double amplitude;
     public double temperature;
-    public double weightR;
     public double deformation;
     public double poes;
+    public double weightR;
     public double result;
     public double aceleration;
 
@@ -53,16 +53,15 @@ public class pegazusController {
         temperature = temperatureCelsius + 273.15;
 
     }
-
-    public void calculateTheWeightOfaRock(double specificGravity, double weightW, double rockVolume) {
+    public void calculateTheWeightOfaRock(double specificGravity, double rockVolume, double weightW) {
 
         weightR = specificGravity * weightW * rockVolume;
 
     }
 
-    public void calculateRiverDisplacement(double speed, double time2, double aceleration2) {
+    public void calculateRiverDisplacement(double speed, double aceleration2, double time2) {
 
-        result = ((speed * time2) + (aceleration2 / 2) * (time2 * time2));
+        result = (((speed  * time2) + (aceleration2 / 2)  * (time2  * time2)));
 
     }
 
@@ -80,9 +79,9 @@ public class pegazusController {
         poes = ((n * reservoirArea * reservoirThickness * porosity)
                 * (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
     }
+
     public void calculateAcceleration(double finalSpeed, double initialVelocity, double time) {
 
         aceleration = (finalSpeed - initialVelocity) / time;
-    
     }
 }
