@@ -147,6 +147,7 @@ public class WeightofRock extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeleteall1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteall1ActionPerformed
+        
         int integer = 0;
 
         txtRockVolume.setText("");
@@ -154,17 +155,14 @@ public class WeightofRock extends javax.swing.JInternalFrame {
         txtSpecificGravity.setText("");
         txtWaterWeight.setText("");
 
-    }//GEN-LAST:event_btnDeleteall1ActionPerformed
-
-    private void txtRockVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRockVolumeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRockVolumeActionPerformed
+    }
 
     private void btmResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmResultActionPerformed
 
         double specificGravity;
         double weightW;
         double rockVolume;
+        
         pegazusController pegazusController = new pegazusController();
         specificGravity = Double.parseDouble(txtSpecificGravity.getText());
         weightW = Double.parseDouble(txtWaterWeight.getText());
@@ -172,7 +170,7 @@ public class WeightofRock extends javax.swing.JInternalFrame {
         pegazusController.calculateTheWeightOfaRock(specificGravity, weightW,rockVolume);
 
         txtRockWeight.setText(String.valueOf(pegazusController.weightR));
-    }//GEN-LAST:event_btmResultActionPerformed
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
