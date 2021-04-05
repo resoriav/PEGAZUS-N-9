@@ -28,8 +28,7 @@ public class TransformTemperature extends javax.swing.JInternalFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
-        jLabel3 = new javax.swing.JLabel();
+jLabel3 = new javax.swing.JLabel();
         txtKelvin = new javax.swing.JTextField();
         btnResult = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -50,7 +49,7 @@ public class TransformTemperature extends javax.swing.JInternalFrame {
         btnResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResultActionPerformed(evt);
-            }
+                
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
