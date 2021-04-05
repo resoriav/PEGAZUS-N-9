@@ -65,7 +65,20 @@ public class pegazusController {
 
     }
 
+    public void calculateDeformation(double force, double initialLength,
+            double crossSectionalArea, double modulusElasticity) {
 
+        deformation = (force * initialLength) / (crossSectionalArea * modulusElasticity);
+    }
+
+    public void calculatePoes(double reservoirArea, double reservoirThickness,
+            double initialWaterSaturation, double volumetricfactor, double porosity) {
+        double n = 7758;
+        double n1 = 1;
+        double n2 = 100;
+        poes = ((n * reservoirArea * reservoirThickness * porosity)
+                * (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
+    }
 
     public void calculateAcceleration(double finalSpeed, double initialVelocity, double time) {
 
