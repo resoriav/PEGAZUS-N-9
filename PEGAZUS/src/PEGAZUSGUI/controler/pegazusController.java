@@ -80,9 +80,9 @@ public class pegazusController {
         poes = ((n * reservoirArea * reservoirThickness * porosity)
                 * (n1 - (initialWaterSaturation / n2))) / (volumetricfactor);
     }
-
     public void calculateAcceleration(double finalSpeed, double initialVelocity, double time) {
 
         aceleration = (finalSpeed - initialVelocity) / time;
+    
     }
 }
