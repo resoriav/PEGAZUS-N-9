@@ -16,12 +16,12 @@ public class pegazusController {
     public double magnitude;
     public double amplitude;
     public double temperature;
-    public double weightR;
-    public double deformation;
     public double poes;
     public double result;
     public double aceleration;
-
+    public double weightR;
+    public double deformation;   
+    
     public void takeOutThePerimeterOfPlot(double number1, double number2,
             double number3) {
 
@@ -70,6 +70,7 @@ public class pegazusController {
             double crossSectionalArea, double modulusElasticity) {
 
         deformation = (force * initialLength) / (crossSectionalArea * modulusElasticity);
+   
     }
 
     public void calculatePoes(double reservoirArea, double reservoirThickness,
