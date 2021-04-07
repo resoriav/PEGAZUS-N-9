@@ -18,6 +18,25 @@ public class TransformTemperature extends javax.swing.JInternalFrame {
      */
     public TransformTemperature() {
         initComponents();
+         jLabel3 = new javax.swing.JLabel();
+        txtKelvin = new javax.swing.JTextField();
+        btnResult = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtCelsius = new javax.swing.JTextField();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Transform Temperature");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Temperature °k");
+
+        btnResult.setText("Result");
+        btnResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResultActionPerformed(evt);
     }
 
     /**
