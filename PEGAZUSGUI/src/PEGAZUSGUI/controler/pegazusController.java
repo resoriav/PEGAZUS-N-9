@@ -21,7 +21,6 @@ public class pegazusController {
     public double aceleration;
     public double weightR;
     public double deformation;   
-     public double deformation;  
     
     public void takeOutThePerimeterOfPlot(double number1, double number2,
             double number3) {
