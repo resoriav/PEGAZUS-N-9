@@ -112,17 +112,9 @@ public class MagnitudeofEarthquake extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
-        float amplitude;
-        float timeVariation;
-
-        pegazusController pegazusController = new pegazusController();
-
-        amplitude= Float.parseFloat(txtAmplitude.getText());
-        timeVariation= Float.parseFloat(txtTimeVariation.getText());
-
-        pegazusController.calculateMagnitudeOfAnEarthquake(amplitude, timeVariation);
-
-        txtMagnitude.setText(String.valueOf(pegazusController.magnitude));
+        
+        
+        
     }//GEN-LAST:event_btnResultActionPerformed
 
 
