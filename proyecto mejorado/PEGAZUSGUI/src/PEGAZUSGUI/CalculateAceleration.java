@@ -18,6 +18,33 @@ public class CalculateAceleration extends javax.swing.JInternalFrame {
      */
     public CalculateAceleration() {
         initComponents();
+         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtFinalSpeed = new javax.swing.JTextField();
+        txtTime = new javax.swing.JTextField();
+        txtInitialVelocity = new javax.swing.JTextField();
+        txtAcceleration = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Calculate Aceleration");
+
+        jLabel2.setText("FINAL SPEED:");
+
+        jLabel3.setText("ACCELERATION:");
+
+        jLabel4.setText("TIME:");
+
+        jLabel5.setText("INITIAL VELOCITY:");
+
+        txtAcceleration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAccelerationActionPerformed(evt);
     }
 
     /**
