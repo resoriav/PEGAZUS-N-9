@@ -29,7 +29,15 @@ public class PerimeterofPlot extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-      
+        txtNumber3 = new javax.swing.JTextField();
+        txtPerimeter = new javax.swing.JTextField();
+        btmResult = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtNumber1 = new javax.swing.JTextField();
+        txtNumber2 = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
