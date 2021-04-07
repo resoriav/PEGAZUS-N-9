@@ -132,16 +132,8 @@ public class PerimeterofPlot extends javax.swing.JInternalFrame {
 
     private void btmResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmResultActionPerformed
 
-        double side1;
-        double side2;
-        double side3;
-        pegazusController pegazusController = new pegazusController();
-        side1 = Double.parseDouble(txtNumber1.getText());
-        side2 = Double.parseDouble(txtNumber2.getText());
-        side3 = Double.parseDouble(txtNumber3.getText());
-        pegazusController.takeOutThePerimeterOfPlot(side1, side2,side3);
-
-        txtPerimeter.setText(String.valueOf(pegazusController.perimeter));
+      
+        
     }//GEN-LAST:event_btmResultActionPerformed
 
 
