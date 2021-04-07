@@ -113,7 +113,17 @@ public class AreaofSurface extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
-       
+        double equivalentdistances;
+        double terrainWidth;
+
+        pegazusController pegazusController = new pegazusController();
+
+        terrainWidth = Double.parseDouble(txtTerrainWidth.getText());
+        equivalentdistances= Double.parseDouble(txtEquivalentDistances.getText());
+
+        pegazusController.calculateTheAreaOfSurface( equivalentdistances, terrainWidth);
+
+        txtArea.setText(String.valueOf(pegazusController.area));
         
     }//GEN-LAST:event_btnResultActionPerformed
 
