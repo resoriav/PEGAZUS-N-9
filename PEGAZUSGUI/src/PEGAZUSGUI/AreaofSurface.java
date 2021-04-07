@@ -37,17 +37,20 @@ public class AreaofSurface extends javax.swing.JInternalFrame {
         txtArea = new javax.swing.JTextField();
         btnResult = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 153, 255));
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
         setTitle("Area Of Surface");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText(" Terrain Width");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Equivalent distances");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Area");
 
         btnResult.setBackground(new java.awt.Color(153, 153, 255));
@@ -80,7 +83,7 @@ public class AreaofSurface extends javax.swing.JInternalFrame {
                         .addComponent(txtTerrainWidth, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                         .addComponent(txtEquivalentDistances)
                         .addComponent(txtArea))
-                    .addContainerGap(114, Short.MAX_VALUE)))
+                    .addContainerGap(87, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +106,7 @@ public class AreaofSurface extends javax.swing.JInternalFrame {
                             .addGap(47, 47, 47)
                             .addComponent(jLabel5))
                         .addComponent(txtArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(71, Short.MAX_VALUE)))
+                    .addContainerGap(81, Short.MAX_VALUE)))
         );
 
         pack();

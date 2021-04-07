@@ -39,18 +39,23 @@ public class CalculateAceleration extends javax.swing.JInternalFrame {
         txtAcceleration = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 102));
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
         setTitle("Calculate Aceleration");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("FINAL SPEED:");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("ACCELERATION:");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("TIME:");
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("INITIAL VELOCITY:");
 
         txtAcceleration.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +64,7 @@ public class CalculateAceleration extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(153, 255, 153));
         jButton1.setText("RESULT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +97,7 @@ public class CalculateAceleration extends javax.swing.JInternalFrame {
                             .addComponent(txtTime, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtInitialVelocity, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addComponent(txtAcceleration, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(38, Short.MAX_VALUE)))
+                    .addContainerGap(33, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
