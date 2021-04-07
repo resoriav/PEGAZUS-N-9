@@ -97,13 +97,7 @@ public class TransformTemperature extends javax.swing.JInternalFrame {
     private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
         double temperatureCelsius;
 
-        pegazusController pegazusController = new pegazusController();
-
-        temperatureCelsius = Double.parseDouble(txtCelsius.getText());
-
-        pegazusController.takeOutTheTemperatureCalculator(temperatureCelsius);
-
-        txtKelvin.setText(String.valueOf(pegazusController.temperature));
+       
     }//GEN-LAST:event_btnResultActionPerformed
 
 
