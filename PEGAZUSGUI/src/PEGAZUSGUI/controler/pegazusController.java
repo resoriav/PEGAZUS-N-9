@@ -25,7 +25,7 @@ public class pegazusController {
     public void takeOutThePerimeterOfPlot(double number1, double number2,
             double number3) {
 
-        
+        perimeter = number1 + number2 + number3;
 
     }
 
