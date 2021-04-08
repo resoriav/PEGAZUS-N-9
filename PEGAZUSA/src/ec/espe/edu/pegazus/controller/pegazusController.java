@@ -30,8 +30,7 @@ public class pegazusController {
     public void calculateMagnitudeOfAnEarthquake(float amplitude,float timeVariation) {
         
         magnitude = (float) (Math.log10(amplitude) + 3 * Math.log10(8 * timeVariation) - 2.85);
-        
-        
+          
     }
      public void calculateWaveRange(float waveHeight,float waveReach) {
         
@@ -43,8 +42,7 @@ public class pegazusController {
        
 
         temperature = temperatureCelsius + 273.15;
-       
-       
+         
     }
      
 
